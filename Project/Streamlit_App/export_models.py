@@ -120,6 +120,7 @@ freq_map7 = df7['Country of Nationality'].value_counts()
 df7['Country of Nationality_new'] = df7['Country of Nationality'].map(freq_map7)
 df7 = df7.drop(columns=['Country of Nationality'])
 
+df8['States/UTs'] = df8['States/UTs'].str.strip()
 le8 = LabelEncoder()
 df8['States/UTs_new'] = le8.fit_transform(df8['States/UTs'])
 df8 = df8.drop(columns=['States/UTs'])
